@@ -890,17 +890,18 @@ def main() -> None:
         slide_no=20, total=TOTAL,
     )
     slide_image_full(
-        prs,
-        title="TY — Chekhlov drawdown family",
-        section="Primary Market — TY",
-        image=FIG_PRES / "slide_03_ty_drawdown_family.png",
-        caption=(
-            "Top: % off running peak. Bottom: $ off running peak. Max DD ≈ 11% / $15.9k. "
-            "CDD(α=0.05) ≈ $13.3k indicates the worst 5% of drawdown bars are concentrated near the max. "
-            "Long underwater stretches are structural for a 1.5%/yr trend-following bond strategy."
-        ),
-        slide_no=21, total=TOTAL,
-    )
+    prs,
+    title="TY — Chekhlov drawdown family",
+    section="Primary Market — TY",
+    image=FIG_PRES / "slide_03_ty_drawdown_family.png",
+    caption=(
+        "Top: % off running peak. Bottom: $ off running peak. "
+        "Max DD ≈ 11% / $15,865 (walk‑forward OOS). "
+        "CDD(α=0.05) = $13,271 — the worst 5% of drawdown bars are concentrated near the max. "
+        "Long underwater stretches are structural for a 1.45%/yr trend‑following bond strategy (annualised return, $100k starting equity)."
+    ),
+    slide_no=21, total=TOTAL,
+)
     slide_image_full(
         prs,
         title="TY — out-of-sample trade PnL distribution",
@@ -1007,22 +1008,23 @@ def main() -> None:
         slide_no=30, total=TOTAL,
     )
     slide_image_full(
-        prs,
-        title="BTC — worst OOS trade · why it got cooked",
-        section="Secondary Market — BTC",
-        image=FIG_PRES / "slide_06_btc_worst_trade.png",
-        side_bullets=[
-            "22 Aug 2025 SHORT @ 112 075 — broke below the 276-bar (1-day) low.",
-            "Within 90 minutes BTC pumped $2 115 (+1.9%) against the position.",
-            "Tight 1% drawdown stop fired at the second bar after the move ($114 190).",
-            "Channel breakout in BTC's mean-reverting 1-day regime — recurring failure mode.",
-            "The push-response diagram already flagged BTC as mean-reverting at the 1-day horizon "
-            "(Spearman ρ = −0.38).",
-            "The −$10 600 loss is ≈ 8% of the OOS Max DD — paid once to stay in the longer-horizon trend regime.",
-        ],
-        caption="Source: Group 1 walk-forward (TF Data 5-min OHLC, $100k initial equity)",
-        slide_no=31, total=TOTAL,
-    )
+    prs,
+    title="BTC — worst OOS trade · why it got cooked",
+    section="Secondary Market — BTC",
+    image=FIG_PRES / "slide_06_btc_worst_trade.png",
+    side_bullets=[
+        "22 Aug 2025 SHORT @ 112 075 — broke below the 276-bar (1-day) low.",
+        "Within 90 minutes BTC pumped $2 115 (+1.9%) against the position.",
+        "Tight 1% drawdown stop fired at the second bar after the move ($114 190).",
+        "Channel breakout in BTC's mean-reverting 1-day regime — recurring failure mode.",
+        "The push-response diagram already flagged BTC as mean-reverting at the 1-day horizon "
+        "(Spearman ρ = −0.38).",
+        f"The −$10,600 loss is ≈ 8.0% of the OOS Max DD ($131,729) — "
+        "paid once to stay in the longer-horizon trend regime.",
+    ],
+    caption="Source: Group 1 walk-forward (TF Data 5-min OHLC, $100k initial equity)",
+    slide_no=31, total=TOTAL,
+)
     slide_image_full(
         prs,
         title="BTC — walk-forward parameter stability",
